@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://img.freepik.com/free-vector/geometric-science-education-background-vector-gradient-blue-digital-remix_53876-125993.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1713398400&semt=ais');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function showResult() {
+            var score = 0;
+            var totalQuestions = 5; // Total number of questions
+
+            // Check the selected answers
+            var answers = document.querySelectorAll('input[type="radio"]:checked');
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i].value === "b") { // Correct answer is 'b' for all questions
+                    score++;
+                }
+            }
+
+            // Calculate percentage
+            var percentage = (score / totalQuestions) * 100;
+
+            // Display result
+            alert("Your score: " + score + "/" + totalQuestions + "\nPercentage: " + percentage.toFixed(2) + "%");
+        }
+    </script>
+</head>
+<body>
+
+<h1>Blockchain Quiz</h1>
+
+<form onsubmit="showResult(); return false;">
+    <label for="question1">1. What is a blockchain?</label><br>
+    <input type="radio" name="question1" value="a"> A centralized database<br>
+    <input type="radio" name="question1" value="b"> A decentralized, distributed ledger<br>
+    <input type="radio" name="question1" value="c"> An encryption algorithm<br>
+    <input type="radio" name="question1" value="d"> A digital currency<br>
+
+    <label for="question2">2. What is the purpose of mining in blockchain?</label><br>
+    <input type="radio" name="question2" value="a"> To create new coins<br>
+    <input type="radio" name="question2" value="b"> To validate and confirm transactions<br>
+    <input type="radio" name="question2" value="c"> To encrypt data<br>
+    <input type="radio" name="question2" value="d"> To regulate blockchain networks<br>
+
+    <label for="question3">3. Which consensus mechanism is used by Bitcoin?</label><br>
+    <input type="radio" name="question3" value="a"> Proof of Authority (PoA)<br>
+    <input type="radio" name="question3" value="b"> Proof of Work (PoW)<br>
+    <input type="radio" name="question3" value="c"> Delegated Proof of Stake (DPoS)<br>
+    <input type="radio" name="question3" value="d"> Proof of Stake (PoS)<br>
+
+    <label for="question4">4. What is a smart contract?</label><br>
+    <input type="radio" name="question4" value="a"> A legally binding document<br>
+    <input type="radio" name="question4" value="b"> Self-executing contracts with the terms written in code<br>
+    <input type="radio" name="question4" value="c"> A contract between two individuals<br>
+    <input type="radio" name="question4" value="d"> A contract managed by a third party<br>
+
+    <label for="question5">5. What is the role of a node in a blockchain network?</label><br>
+    <input type="radio" name="question5" value="a"> To create new blocks<br>
+    <input type="radio" name="question5" value="b"> To store and validate transactions<br>
+    <input type="radio" name="question5" value="c"> To encrypt data<br>
+    <input type="radio" name="question5" value="d"> To regulate network traffic<br>
+
+    <input type="submit" value="Submit Quiz">
+</form>
+
+</body>
+</html>

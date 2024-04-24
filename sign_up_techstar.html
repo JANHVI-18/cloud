@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up for TechStar E-Learning</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://media.licdn.com/dms/image/D4D12AQEdzKZMvmSYUQ/article-cover_image-shrink_600_2000/0/1688736045746?e=2147483647&v=beta&t=il2UhRiPnHUrLCdqbll9WSYkjEstQtIcjRPjEobj6Z4'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px); /* Blur the background */
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            color: #fff;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .logo {
+            width: 100px; /* Adjust the size as needed */
+            border-radius: 50%; /* Make it circular */
+            margin-right: 50px; /* Adjust margin to shift the logo to the right */
+        }
+
+        main {
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for card effect */
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://w7.pngwing.com/pngs/465/720/png-transparent-computer-icons-e-learning-encapsulated-postscript-learning-education-text-orange-logo.png" alt="TechStar Logo" class="logo">
+    <h1>Sign Up for TechStar E-Learning</h1>
+</header>
+
+<main>
+    <form action="/signup" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course">
+            <option value="SOL">School of Law (SOL)</option>
+            <option value="SOCS">School of Computer Science (SOCS)</option>
+            <option value="SOHS">School of Health Sciences (SOHS)</option>
+            <option value="SOM">School of Management (SOM)</option>
+            <option value="SOE">School of Engineering (SOE)</option>
+        </select>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2024 TechStar</p>
+</footer>
+
+</body>
+</html>

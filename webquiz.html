@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://img.freepik.com/free-vector/geometric-science-education-background-vector-gradient-blue-digital-remix_53876-125993.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1713398400&semt=ais');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function showResult() {
+            var score = 0;
+            var totalQuestions = 5; // Total number of questions
+
+            // Check the selected answers
+            var answers = document.querySelectorAll('input[type="radio"]:checked');
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i].value === "b") { // Correct answer is 'b' for all questions
+                    score++;
+                }
+            }
+
+            // Calculate percentage
+            var percentage = (score / totalQuestions) * 100;
+
+            // Display result
+            alert("Your score: " + score + "/" + totalQuestions + "\nPercentage: " + percentage.toFixed(2) + "%");
+        }
+    </script>
+</head>
+<body>
+
+<h1>Web Development Quiz</h1>
+
+<form onsubmit="showResult(); return false;">
+    <label for="question1">1. Which tag is used to create a hyperlink in HTML?</label><br>
+    <input type="radio" name="question1" value="a"> &lt;a&gt;<br>
+    <input type="radio" name="question1" value="b"> &lt;link&gt;<br>
+    <input type="radio" name="question1" value="c"> &lt;href&gt;<br>
+    <input type="radio" name="question1" value="d"> &lt;url&gt;<br>
+
+    <label for="question2">2. Which property is used to change the text color of an element in CSS?</label><br>
+    <input type="radio" name="question2" value="a"> color<br>
+    <input type="radio" name="question2" value="b"> text-color<br>
+    <input type="radio" name="question2" value="c"> font-color<br>
+    <input type="radio" name="question2" value="d"> background-color<br>
+
+    <label for="question3">3. Which event occurs when the user clicks on an HTML element?</label><br>
+    <input type="radio" name="question3" value="a"> onhover<br>
+    <input type="radio" name="question3" value="b"> onclick<br>
+    <input type="radio" name="question3" value="c"> onscroll<br>
+    <input type="radio" name="question3" value="d"> onmouseover<br>
+
+    <label for="question4">4. What does CSS stand for?</label><br>
+    <input type="radio" name="question4" value="a"> Cascading Style Sheets<br>
+    <input type="radio" name="question4" value="b"> Computer Style Sheets<br>
+    <input type="radio" name="question4" value="c"> Creative Style Sheets<br>
+    <input type="radio" name="question4" value="d"> Colorful Style Sheets<br>
+
+    <label for="question5">5. Which of the following is NOT a valid JavaScript variable name?</label><br>
+    <input type="radio" name="question5" value="a"> myVar<br>
+    <input type="radio" name="question5" value="b"> _myVar<br>
+    <input type="radio" name="question5" value="c"> 2myVar<br>
+    <input type="radio" name="question5" value="d"> $myVar<br>
+
+    <input type="submit" value="Submit Quiz">
+</form>
+
+</body>
+</html>
